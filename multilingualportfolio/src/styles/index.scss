@@ -44,5 +44,43 @@ body {
 }
 
 #change_language {
-  width: 10rem;
+  width: 8rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+
+  &:hover {
+    color: $primary_red !important;
+    font-weight: bolder;
+  }
+}
+
+a.internal,
+a.internal:visited {
+  text-decoration: none;
+  position: relative;
+  color: white;
+
+  &:after {
+    content: "";
+    height: 0.1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: white;
+    transition: 0.2s;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+#link_zone {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
