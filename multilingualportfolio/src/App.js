@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { IntlProvider } from 'react-intl';
 
-function App() {
+import FR from './Translations/Fr';
+import EN from './Translations/En';
+
+const Messages = {
+  FR: FR,
+  EN: EN,
+}; 
+
+const App = () => {
+  const [language, setLanguage] = useState('EN');
+  const [targetLanguage, setTargetLanguage] = useState('FR');
+
+  const toggleLanguage = () => { 
+    if (language === "FR") {
+      setLanguage("EN")
+      setTargetLanguage("FR")
+    } else { 
+      setLanguage("FR")
+      setTargetLanguage("EN")
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IntlProvider locale={language} messages={Messages[language]}>
+      <h1>{Messages[language].title}</h1>
+      <button onClick={toggleLanguage}>change to {targetLanguage}</button>
+      <p>{Messages[language].presentation}</p>
+      <p>{Messages[language].work}</p>
+      <p>{Messages[language].contact}</p>
+    </IntlProvider>
   );
-}
+};
 
 export default App;
