@@ -4,7 +4,9 @@ import {
 } from 'antd';
 import { injectIntl } from 'react-intl';
 
-const ContactForm = ({ intl }) => {
+import { withClick } from '../Constants/ClickContext';
+
+const ContactForm = ({ intl, click }) => {
   const { Option } = Select;
   const layout = {
     wrapperCol: {
@@ -24,7 +26,6 @@ const ContactForm = ({ intl }) => {
       <Form.Item name="name" rules={[{ required: true }]}>
         <Input placeholder={intl.formatMessage({ id: 'name' })} />
       </Form.Item>
-
       <Form.Item name="contact" rules={[{ required: true }]}>
         <Input placeholder={intl.formatMessage({ id: 'phone_or_mail' })} />
       </Form.Item>
@@ -55,12 +56,14 @@ const ContactForm = ({ intl }) => {
         ) : null)}
       </Form.Item>
       <Form.Item {...tailLayout}>
-        <Button type="primary" htmlType="submit">
-          Submit
+        <Button type="primary" htmlType="submit" onClick={click.incrementClick}>
+          {intl.formatMessage({ id: 'submit' })}
+          {' '}
+          {click.counter}
         </Button>
       </Form.Item>
     </Form>
   );
 };
 
-export default injectIntl(ContactForm);
+export default withClick(injectIntl(ContactForm));

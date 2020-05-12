@@ -25,3 +25,5 @@ To see result
 
 1. How to translate antD `required` input message ?
 2. I kinda hate antD's way of mask CSS as js in layout options, it is so nasty.
+3. How to add `onclick` to text in `<FormattedMessage>` ?
+4. How to concatenate `intl.formatMessage({ id: 'submit' })` with other vars? It seems the "`${}`" doesn't work -\_-!
