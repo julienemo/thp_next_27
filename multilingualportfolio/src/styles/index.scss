@@ -1,9 +1,10 @@
 $background_gray: #04060c;
 $primary_red: #fc0404;
+$input_bg: #e6edf4;
 
 body {
   margin: 2rem 5rem;
-  color: white;
+  color: white !important;
   background-color: $background_gray;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -24,18 +25,20 @@ body {
   p {
     text-align: justify;
   }
+
   button {
-    padding: 0.5rem 1rem;
-    background-color: $primary_red;
-    font-weight: bolder;
-    color: white;
-    outline: none;
-    border: 0;
-    border-radius: 0.3rem;
+    padding: 0.5rem 1rem !important;
+    background-color: $primary_red !important;
+    color: white !important;
+    outline: none !important;
+    border: 0 !important;
+    border-radius: 0.3rem !important;
+    min-height: 3rem !important;
+    font-weight: bolder !important;
 
     &:hover {
-      color: $background_gray;
-      cursor: pointer;
+      color: $background_gray !important;
+      cursor: pointer !important;
     }
   }
 
@@ -49,6 +52,14 @@ body {
       font-weight: bolder;
     }
   }
+
+  input,
+  select {
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+  }
 }
 
 #btn_zone {
@@ -59,6 +70,7 @@ body {
 
 #change_language {
   width: 8rem;
+  margin: 0 3rem;
 }
 
 a.internal,
@@ -86,4 +98,32 @@ a.internal:visited {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+
+.ant-form-item {
+  margin: 1rem 0;
+}
+
+.ant-input,
+.ant-select-selection-search-input {
+  background-color: $input_bg;
+}
+
+label {
+  color: white !important;
+  padding-bottom: 0.5rem;
+}
+
+#form_zone {
+  margin: 3rem 10rem;
+}
+
+.text_zone {
+  margin: 3rem 0 0 0;
+  display: flex;
+
+  .text {
+    width: 50rem;
+    margin: 0 1rem;
+  }
 }

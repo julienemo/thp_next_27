@@ -1,0 +1,10 @@
+{
+  "name": "Your name",
+  "phone_or_mail": "Your phone number or email",
+  "delay": "When do you prefer we discuss",
+  "asap": "As soon as possible",
+  "before_next_week": "Before the end of next week",
+  "no_urgent": "No urgency",
+  "submit": "Confirm",
+  "required": "Please fill this field"
+}

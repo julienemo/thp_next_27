@@ -1,0 +1,10 @@
+{
+  "name": "Votre nom",
+  "phone_or_mail": "Votre numéro ou adresse mail",
+  "delay": "Quand ?",
+  "asap": "Dès possible",
+  "before_next_week": "Avant la fin de la semaine pro",
+  "no_urgent": "Rien d'urgent",
+  "submit": "Envoyer",
+  "required": "Veuillez remplir ce champs"
+}
