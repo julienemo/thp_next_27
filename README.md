@@ -24,3 +24,4 @@ To see result
 **Difficulties**
 
 1. How to translate antD `required` input message ?
+2. I kinda hate antD's way of mask CSS as js in layout options, it is so nasty.

@@ -12,8 +12,6 @@ const Navbar = ({ ...btnOnClick }) => (
         id="change_language"
         onClick={btnOnClick.btnOnClick}
       >
-        change to
-        {' '}
         <FormattedMessage id="target" />
       </button>
     </div>

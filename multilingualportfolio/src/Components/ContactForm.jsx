@@ -2,19 +2,18 @@ import React from 'react';
 import {
   Form, Input, Button, Select,
 } from 'antd';
-import { injectIntl, FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 
 const ContactForm = ({ intl }) => {
   const { Option } = Select;
   const layout = {
-
     wrapperCol: {
-      span: 20,
+      span: 24,
     },
   };
   const tailLayout = {
     wrapperCol: {
-      offset: 8,
+      offset: 10,
       span: 16,
     },
   };
