@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { IntlProvider } from 'react-intl';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import FR from './Translations/Fr';
 import EN from './Translations/En';
 
 import Navbar from './Components/Navbar';
-// import Showcase from './Pages/Showcase';
+import Home from './Pages/Home';
+import Showcase from './Pages/Showcase';
 
 const Messages = {
   FR,
@@ -23,11 +24,10 @@ const App = () => {
     <IntlProvider locale={language} messages={Messages[language]}>
       <Router>
         <Navbar btnOnClick={toggleLanguage} />
-        <p>{Messages[language].presentation}</p>
-        <p>{Messages[language].work}</p>
-        <p>{Messages[language].contact}</p>
-
-        <Switch />
+        <Switch>
+          <Route exact path="/"><Home /></Route>
+          <Route path="/work"><Showcase /></Route>
+        </Switch>
       </Router>
     </IntlProvider>
   );
